@@ -1,0 +1,463 @@
+*{
+    font-family:monospace;
+    font-weight:1000;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    display:flex;
+    justify-content:left;
+    align-items:center;
+    min-height:100vh;
+    background:url(../Desktop/Image/leaf.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    transform:scaleX(1);
+}
+/* body:active{
+    transform:scaleX(0);
+} */
+.name{
+    user-select:none;
+}
+.name img{
+    position:relative;
+    image-resolution:inherit;
+    top:1.5px;
+    left:-5px;
+}
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 100px;
+    background:blue;
+    color:black;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    z-index:99;
+    background:transparent;
+}
+.navigation a{
+    position:relative;
+    font-size:1em;
+    color:black;
+    text-decoration: none;
+    font-weight:500;
+    margin-left:30px;
+}
+.navigation a::after{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:3px;
+    background:#000;
+    border-radius:3px;
+    left: 0px;
+    bottom:-10px;
+    transform-origin:right;
+    transform:scaleX(0);
+    transition:0.5s;
+}
+.navigation a:hover::after{
+    transform-origin:left;
+    transform:scaleX(1);
+}
+.btn{
+    margin-left:30px;
+    background:transparent;
+    color:#000;
+    border:2px solid #000;
+    border-radius:10px;
+    height:30px;
+    width:100px;
+    font-weight:500;
+    font-size:1em;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color:#000;
+    color:#fff;
+}
+.button1{
+    position:absolute;
+    top:55%;
+    left:65%;
+    margin-left:30px;
+    background:transparent;
+    color:#000;
+    border:2px solid #000;
+    border-radius:10px;
+    height:30px;
+    width:80px;
+    font-weight:500;
+    font-size:1em;
+}
+.button1:hover{
+    cursor: pointer;
+    background-color:#000;
+    color:#fff;
+}
+.button2{
+    position:absolute;
+    top:55%;
+    left:72%;
+    margin-left:30px;
+    background:transparent;
+    color:#000;
+    border:2px solid #000;
+    border-radius:10px;
+    height:30px;
+    width:60px;
+    font-weight:500;
+    font-size:1em;
+}
+.button2:hover{
+    cursor: pointer;
+    background-color:#000;
+    color:#fff;
+}
+.outer{
+    position:relative;
+    font-weight:500;
+    top:2%;
+    left:7%;
+    height:440px;
+    width:440px;
+    background:transparent;
+    border:2px solid#000;
+    border-radius:20px;
+    backdrop-filter:blur(20px);
+    box-shadow:0 0 20px #000;
+    display:flex;
+    justify-content: left;
+    align-items:center;
+    overflow:hidden;
+    transform:scale(0);
+    transition:.3s ease;
+}
+.outer.active{
+    transform:scale(1);
+}
+.outer.activate{
+    transition:.13s ease;
+    height:500px;
+    width:400px;
+}
+.outer.deactivate{
+    width:400px;
+}
+.outer.activated{
+    height:585px;
+}
+.inner.activated{
+    transition:.13s ease;
+    transform:translateX(-500px);
+}
+.outer .inner{
+    width:100%;
+    padding:40px;
+}
+.inner_reset{
+    position:absolute;
+    transform: translateX(500px);
+}
+.reset2{
+    transform:scale(0);
+}
+.reset2.active{
+    transform:scale(1);
+}
+.reset3{
+    transform:scale(0);
+}
+.reset3.active{
+    transform:scale(1);
+}
+.inner_register{
+    position:absolute;
+    transform:translateX(1000px);
+}
+.inner_register.activated{
+    transform:translateX(50px);
+}
+.inner_reset.activated{
+    transition:.13s ease;
+    transform:translateX(40px);
+}
+.head{
+    text-align:center;
+    position:relative;
+    bottom:90px;
+}
+h2{
+    font-size:2em;
+    text-align:center; 
+}
+.inner h5{
+    position:absolute;
+    font-weight:1000;
+    top:2%;
+    left:40.2%
+}
+.login{
+    position:relative;
+    width:100;
+    height:80px;
+    border-bottom:2px solid black;
+    margin:30px,0;
+}
+.login label{
+    position:absolute;
+    top:50%;
+    left:5px;
+    transform:translateY(-50%);
+    font-size:1em;
+    font-weight:500;
+    pointer-events:none;
+    transition:.5s;
+}
+.login input:focus~label,
+.login input:valid~label{
+    top:13px;
+}
+.login input{
+    width:100%;
+    height:100%;
+    background:transparent;
+    border:none;
+    outline:none;
+    font-size:1.1em;
+    font-weight:300;
+    padding:5px 0 0 35px;
+}
+.inner_reset input{
+    width:100%;
+    height:100%;
+    background:transparent;
+    border:none;
+    outline:none;
+    font-size:1.1em;
+    font-weight:300;
+    padding:5px 110px 0 35px;
+}
+.login .icon{
+    position:relative;
+    top:55px;
+    font-size:1.2em;
+}
+.remember-forgot{
+    font-size:0.9em;
+    font-weight:300;
+    margin:15px 0;
+    display:flex;
+    justify-content:space-between;
+    accent-color:#000;
+}
+.remember-forgot a{
+    text-decoration:none;
+    color:inherit;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+.check{
+    cursor: pointer;
+    position:relative;
+    top:2px;
+    left:-2px;
+}
+.button{
+    cursor: pointer;
+    width:100%;
+    height:40px;
+    border-radius:10px;
+    font-size:1.1em;
+    outline:none;
+    border:none;
+}
+.button:hover{
+    color:#fff;
+    background:#000;
+}
+.register{
+    padding:40px 0 0 0;
+    font-weight: 300;
+}
+.register a{
+    text-decoration:none;
+    color:inherit;
+}
+.register a:hover{
+    text-decoration:underline;
+}
+select{
+    width:100%;
+    height:100%;
+    background:transparent;
+    border:none;
+    outline:none;
+    font-size:1.1em;
+    font-weight:300;
+    padding:5px 0 0 35px;
+}
+/*option:nth-child(1):hover{
+    background:#000;
+    color:#fff;
+}
+option:nth-child(2):hover{
+    background:#000;
+}
+option:nth-child(3):hover{
+    background:#000;
+}
+option:nth-child(4):hover{
+    background:#000;
+}
+option:nth-child(5){
+    background:#000;
+}
+option:nth-child(6){
+    background:#000;
+} */
+.close{
+    cursor: pointer;
+    position:absolute;
+    top:2.2px;
+    left:93%;
+    font-size:2em;
+    width:50px;
+    height:35px;
+}
+.back{
+    display:flex;
+    flex-direction:row;
+    padding:20px 0 0 0;
+}
+
+.reset_login{
+    position:relative;
+    left:10px;
+    font-weight:inherit;
+}
+.back a{
+    color:inherit;
+    text-decoration: none;
+}
+.back a:hover{
+    cursor:pointer;
+    text-decoration: underline;
+}
+.button{
+    position:relative;
+    top:10px;
+}
+/* .submit a {
+    position: relative;
+    left:33%;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+  }
+  
+  .submit a:hover {
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000,
+                0 0 25px #000,
+                0 0 50px #000,
+                0 0 100px #000;
+  }
+  
+  .submit a span {
+    position: absolute;
+    display: block;
+  }
+  
+  .submit a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #000);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .submit a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #000);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .submit a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #000);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .submit a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #000);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+} */

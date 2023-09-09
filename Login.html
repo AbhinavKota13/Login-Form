@@ -1,0 +1,140 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf|Login</title>
+    <link rel="stylesheet" href="AB.css" type="text/css">
+    <link rel="icon" href="C:\Users\91934\OneDrive\Desktop\Image\leaf_symbol.png">
+ </head>
+ <body>
+    <header>
+        <h2 class="name">Hidden Leaf Village <img src="C:\Users\91934\OneDrive\Desktop\Image\leaf_symbol.png" height="22px" width="22px"></h2>
+        <nav class="navigation">
+            <a class="home" href="#">Home</a>
+            <a class="about" href="#">About</a>
+            <a class="contact" href="#">Contact</a>
+            <button class="btn" type="button">Login</button>
+        </nav>  
+    </header>
+    <div class="outer">
+        <div class="inner">
+            <span class="close"><ion-icon name="close-circle-outline"></ion-icon></span>
+            <h5 class="head">Have an Account?</h5>
+            <h2>Login</h2>
+            <form  action="C:\xampp\htdocs\myapp\Login.php" method="POST" >
+                <div class="login">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <input  class="input" type="text" id="username" name="username" required>
+                    <label for="username">Ninja ID</label>
+                </div>
+                <div class="login">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input class="input" type="password" id="password" name="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input class="check" type="checkbox">Remember Me</label>
+                    <a href="#" class="forgot">Forgot Password?</a>
+                </div>
+                <div class="submit">
+                    <button class="button">Login</button>
+                </div>
+                <div class="register">
+                    <p>Dont have an account?<a href="#">Register</a></p>
+                </div>
+            </form>
+        </div>  
+        <div class="inner_reset">
+            <h2>Reset Your Password</h2>
+            <form>
+                <div class="login">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input class="input" type="email" id="email" required>
+                    <label>Enter Email ID</label>
+                    <button class="button1" type="button">Send OTP</button>
+                </div>
+                <div class="reset2">
+                    <div class="login">
+                        <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+                        <input class="input" id="otp" type="text" required>
+                        <label>Enter OTP</label>
+                        <button class="button2">Check</button>
+                    </div>
+                </div>
+                <div class="reset3">
+                    <div class="login">
+                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                        <input class="input" id="new_password" type="password" required>
+                        <label>Enter New Password</label>
+                    </div>
+                    <div class="login">
+                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                        <input class="input" id="confirm" type="password" required>
+                        <label>Confirm New Password</label>
+                    </div>
+                    <div>
+                        <button class="button" type="submit">Reset</button>
+                    </div>
+                    <div class="back">
+                        <p>Back to</p>
+                        <a class="reset_login">Login</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="inner_register">
+            <h2>Registration</h2>
+            <form>
+                <div class="login">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input  class="input" type="text" required>
+                    <label>Email</label>
+                </div>
+                <div class="login">
+                    <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+                    <input  class="input" type="tel" name="phone" id="phone" required>
+                    <label>Mobile</label>
+                </div>
+                <div class="login">
+                    <span class="icon"><img src="C:\Users\91934\OneDrive\Desktop\Image\leaf_symbol.png" height="15px" width="15px"></span>
+                    <label>Who Are You...?</label>
+                    <select class="input" name="place" id="place">
+                        <option value="Rookie">Rookie</option>
+                        <option value="Genin">Genin</option>
+                        <option value="Chunin">Chunin</option>
+                        <option value="Jonin">Jonin</option>
+                        <option value="Sanin">Sanin</option>
+                        <option value="Hokage">Hokage</option>
+                </select>
+                </div>
+                <div class="login">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <input  class="input" type="text" required>
+                    <label>Ninja ID</label>
+                </div>
+                <div class="login">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input class="input" type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input class="check" type="checkbox">I have read & agree to all terms and conditions*</label>
+                </div>
+                <div>
+                    <button type="submit" class="button">Register</button>
+                </div>
+                <div class="back">
+                    <p>Already have an account?</p>
+                    <a href="#" class="register_login">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="C:\Users\91934\OneDrive\Desktop\AB.js"></script>
+    <script src="C:\Users\91934\OneDrive\Desktop\vanilla-tilt.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+ </body>
+</html>

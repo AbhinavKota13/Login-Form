@@ -1,0 +1,138 @@
+*{
+    font-family:monospace;
+    font-weight:1000;
+    box-sizing:border-box;
+}
+body{
+    min-height:100vh;
+    background:url(../Desktop/Image/Village.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    image-resolution:inherit;
+}
+header{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 80px;
+    transition:.3s ease;
+}
+h3{
+    display:flex;
+    justify-content: left;
+    align-items:left;
+    font-size: 30px;
+    transition:.3s ease;
+}
+.outer{
+    position:relative;
+    font-weight:500;
+    top:2%;
+    left:7%;
+    height:500px;
+    width:1300px;
+    background:transparent;
+    border:2px solid#000;
+    border-radius:20px;
+    backdrop-filter:blur(13px);
+    box-shadow:0 0 5px #000;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    /* overflow:hidden; */
+    transition:.13s ease;
+}
+.outer .inner{
+    width:100%;
+    padding:40px;
+}
+.back_login{
+    font:"Roboto";
+    font-size:20px;
+    position:absolute;
+    top:3%;
+    left:90%;
+}
+.back_login:hover{
+    text-decoration: underline;
+    cursor:pointer;
+}
+.inner2{
+    width:100%;
+    padding:40px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    transform:scale(0);
+}
+.inner2 h3{
+    position:absolute;
+    top:-280%;
+    left:-20%;
+}
+.inner2.active{
+    transform:scale(1);
+}
+.inner.active{
+    transition:.13s ease;
+    transform:translateX(-1500px);
+}
+.inner h3{
+    position:absolute;
+    top:0;
+    left:35%;
+    font-family: 'roboto',sans-serif;
+}
+.p{
+    padding:20px 20px 0 20px;
+    font-size:20px;
+    position:absolute;
+    top:10%;
+    left:0;
+    right:50%;
+}
+.head{
+    padding:20px 20px 0 20px;
+    font-family: 'roboto',sans-serif;
+    position:absolute;
+    font-size:25px;
+    top:50%;
+    left:3%;
+    right:50%;
+}
+.italic{
+    padding:20px 20px 0 20px;
+    position:absolute;
+    font-size:20px;
+    top:60%;
+    left:0;
+    right:50%;
+}
+.image img{
+    image-resolution: inherit;
+    position:absolute;
+    top:20%;
+    left:50%;
+    border-radius:20%;
+}
+.icon{
+    position:absolute;
+    font-size:2em;
+    top:92%;
+    left:96.5%;
+}
+.back{
+    position:absolute;
+    font-size:2em;
+    top:92%;
+    left:1.5%;
+    transform:scale(0);
+}
+.back.active{
+    transform:scale(1);
+}
+.inner.active{
+    transform:scaleX(-1000px);
+    transition:.13s ease;
+}
